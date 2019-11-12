@@ -5,35 +5,54 @@ html, body{
 }
 body{
   background-color: #282c34;
+
 }
 .App {
-  text-align: center;
-  margin: auto;
   color: #4A778C;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-rows: 10vh 10vh 150vh 10vh;
+  gap: 5px;
 }
 img{
-  margin: 15px;
+   grid-column: 1/4;
+   height: 100%;
+   justify-self:center ;
 }
+
 .top-bar{
   color: antiquewhite;
   background-color: rgba(47, 79, 99, 0.8);
   border: 1.5px solid rgba(194, 143, 95, 0.8);
-  display: flex;
-  width: 100%;
-  height: 7vh;
-  justify-content: center;
+  grid-column: 1/4;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
 }
 #prev-page{
   color: antiquewhite;
-  
+  justify-self: end;
+  align-self: center;
 }
 #next-page{
   color: antiquewhite;
-  
+  justify-self: start;
+  align-self: center;
 }
-.sec-pdf{
-  background-color: blueviolet;
+.info-page{
+  justify-self: center;
+  align-self: center;
 }
-.pdf-view{
-  background-color: azure;
+
+.doc-cont{
+ grid-column: 1/4;
+
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ max-width: 100%;
+}
+.document{
+  justify-self: center;
+  grid-column: 2/4;
+  max-width: 100%;
 }

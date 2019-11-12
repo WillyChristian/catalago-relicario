@@ -31,8 +31,8 @@ render(){
     <div className="App">
         
           <img src={LogoEscrito} alt="logoEscrito"/>
+{/****************** NAVEGAÇÃO ************************/}          
         <section className="top-bar">
-
 
           <button className="btn" id="prev-page" disabled={pageNumber <= 1} onClick={this.pagAnterior}>
             <i className="fas fa-arrow-circle-left m-1"></i>Anterior
@@ -51,17 +51,30 @@ render(){
           </button>
         </section>
 
-        <section className="container">
-          <Document file={catalogo} 
+{/****************** CONTEÚDO ************************/}     
+        <section className="doc-cont">
+          <Document className="document"
+                    file={catalogo} 
                     onLoadSuccess={this.onDocumentLoadSuccess}
                      >
                        
             <Page pageNumber={pageNumber} />
           </Document>
+{/****************** RODA-PÉ ************************/}     
 
         </section>
 
+        <section className="top-bar">
 
+          <button className="btn" id="b-prev-page" disabled={pageNumber <= 1} onClick={this.pagAnterior}>
+            <i className="fas fa-arrow-circle-left m-1"></i>Anterior
+          </button>
+
+          <button className="btn" id="b-next-page" disabled={pageNumber >= numPages} onClick={this.pagPosterior} >
+            Próximo
+                  <i className="fas fa-arrow-circle-right m-1"></i>
+          </button>
+        </section>
 
 
     </div>
