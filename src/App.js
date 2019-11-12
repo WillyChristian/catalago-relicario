@@ -1,36 +1,37 @@
 import React, {Component} from 'react';
 import LogoEscrito from './Component/IMG/Logo/LogoEscrito.png'
 import './App.css';
-import {Document, Page} from 'react-pdf'
 import catalogo from './Component/Catalogo/catalogo.pdf'
-import { pdfjs } from 'react-pdf';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
-
+import { PDFReader } from 'reactjs-pdf-reader';
 
 class App extends Component {
-
+  
   state = {
     numPages : null,
     pageNumber: 1
   }
-
-  onDocumentLoadSuccess = ({ numPages }) => {
-    this.setState({numPages, pageNumber: 1})
+  
+  totalPage = (page) =>{
+    this.setState({numPages: page})
   }
   changePage = offset => this.setState(prevState => ({
     pageNumber: prevState.pageNumber + offset,
   }))
-
+  
   pagAnterior = () => this.changePage(-1)
   pagPosterior = () => this.changePage(1)
-
-render(){ 
-  const {pageNumber, numPages} = this.state
   
+ 
+  render(){ 
+  const {pageNumber, numPages} = this.state
+
+
   return (
     <div className="App">
         
           <img src={LogoEscrito} alt="logoEscrito"/>
+        
+
 {/****************** NAVEGAÇÃO ************************/}          
         <section className="top-bar">
 
@@ -53,17 +54,16 @@ render(){
 
 {/****************** CONTEÚDO ************************/}     
         <section className="doc-cont">
-          <Document className="document"
-                    file={catalogo} 
-                    onLoadSuccess={this.onDocumentLoadSuccess}
-                     >
-                       
-            <Page pageNumber={pageNumber} />
-          </Document>
-{/****************** RODA-PÉ ************************/}     
-
+        <PDFReader 
+          url={catalogo}  
+          onDocumentComplete={this.totalPage}
+          page={pageNumber}
+          width="400"
+        />
         </section>
 
+
+{/****************** RODA-PÉ ************************/}     
         <section className="bottom-bar">
 
           <button className="btn" id="b-prev-page" disabled={pageNumber <= 1} onClick={this.pagAnterior}>
@@ -82,4 +82,4 @@ render(){
   }
 }
 
-export default App;
+export default App
