@@ -64,7 +64,7 @@ render(){
 
         </section>
 
-        <section className="top-bar">
+        <section className="bottom-bar">
 
           <button className="btn" id="b-prev-page" disabled={pageNumber <= 1} onClick={this.pagAnterior}>
             <i className="fas fa-arrow-circle-left m-1"></i>Anterior
