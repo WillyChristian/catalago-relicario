@@ -1,87 +1,99 @@
-import React, {Component} from 'react';
-import './App.css';
-import catalogo from './Component/Catalogo/catalogo.pdf'
-import { PDFReader } from 'reactjs-pdf-reader';
-import Header from './Component/Header';
-import Menu from './Component/Menu';
+import React, { Component } from "react";
+import "./App.css";
+import catalogo from "./Component/Catalogo/catalogo.pdf";
+import { PDFReader } from "reactjs-pdf-reader";
+import Header from "./Component/Header";
+import Menu from "./Component/Menu";
 
 class App extends Component {
-  
   state = {
-    numPages : null,
+    numPages: null,
     pageNumber: 1
-  }
-  
-  totalPage = (page) =>{
-    this.setState({numPages: page})
-  }
-  changePage = offset => this.setState(prevState => ({
-    pageNumber: prevState.pageNumber + offset,
-  }))
-  
-  pagAnterior = () => this.changePage(-1)
-  pagPosterior = () => this.changePage(1)
-  
- 
-  render(){ 
-  const {pageNumber, numPages} = this.state
+  };
 
+  totalPage = page => {
+    this.setState({ numPages: page });
+  };
+  changePage = offset =>
+    this.setState(prevState => ({
+      pageNumber: prevState.pageNumber + offset
+    }));
 
-  return (
-    <div className="App">
-      <section className="header">
-        <Header /> {/* aqui ta o botão sandwich */}
-      </section>    
-      <Menu className="hide-menu" /> {/* aqui ta o menu que vai ser aberto */}
+  pagAnterior = () => this.changePage(-1);
+  pagPosterior = () => this.changePage(1);
 
-{/****************** NAVEGAÇÃO ************************/}          
+  render() {
+    const { pageNumber, numPages } = this.state;
+
+    return (
+      <div className="App">
+        <section className="header">
+          <Header /> {/* aqui ta o botão sandwich */}
+        </section>
+        <Menu className="hide-menu" /> {/* aqui ta o menu que vai ser aberto */}
+        {/****************** NAVEGAÇÃO ************************/}
         <section className="top-bar">
-
-          <button className="btn" id="prev-page" disabled={pageNumber <= 1} onClick={this.pagAnterior}>
+          <button
+            className="btn"
+            id="prev-page"
+            disabled={pageNumber <= 1}
+            onClick={this.pagAnterior}
+          >
             <i className="fas fa-arrow-circle-left m-1"></i>Anterior
           </button>
 
           <span className="info-page">
             Página
-              <span className="page-num">{pageNumber || (numPages ? 1 : '--')}</span>
+            <span className="page-num">
+              {pageNumber || (numPages ? 1 : "--")}
+            </span>
             de
-              <span className="page-cont">{numPages || '--'}</span>
+            <span className="page-cont">{numPages || "--"}</span>
           </span>
 
-          <button className="btn" id="next-page" disabled={pageNumber >= numPages} onClick={this.pagPosterior} >
+          <button
+            className="btn"
+            id="next-page"
+            disabled={pageNumber >= numPages}
+            onClick={this.pagPosterior}
+          >
             Próximo
-                  <i className="fas fa-arrow-circle-right m-1"></i>
+            <i className="fas fa-arrow-circle-right m-1"></i>
           </button>
         </section>
-
-{/****************** CONTEÚDO ************************/}     
+        {/****************** CONTEÚDO ************************/}
         <section className="doc-cont">
-        <PDFReader 
-          url={catalogo}  
-          onDocumentComplete={this.totalPage}
-          page={pageNumber}
-          width="400"
-        />
+          <PDFReader
+            url={catalogo}
+            onDocumentComplete={this.totalPage}
+            page={pageNumber}
+            width="400"
+          />
         </section>
-
-
-{/****************** RODA-PÉ ************************/}     
+        {/****************** RODA-PÉ ************************/}
         <section className="bottom-bar">
-
-          <button className="btn" id="b-prev-page" disabled={pageNumber <= 1} onClick={this.pagAnterior}>
+          <button
+            className="btn"
+            id="b-prev-page"
+            disabled={pageNumber <= 1}
+            onClick={this.pagAnterior}
+          >
             <i className="fas fa-arrow-circle-left m-1"></i>Anterior
           </button>
 
-          <button className="btn" id="b-next-page" disabled={pageNumber >= numPages} onClick={this.pagPosterior} >
+          <button
+            className="btn"
+            id="b-next-page"
+            disabled={pageNumber >= numPages}
+            onClick={this.pagPosterior}
+          >
             Próximo
-                  <i className="fas fa-arrow-circle-right m-1"></i>
+            <i className="fas fa-arrow-circle-right m-1"></i>
           </button>
         </section>
-
-
-    </div>
-  );
+      </div>
+    );
   }
 }
 
-export default App
+export default App;
