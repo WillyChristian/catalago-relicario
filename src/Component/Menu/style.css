@@ -1,0 +1,21 @@
+.menu{
+    position: absolute;
+    top: 10.6vh;
+    left: -100%;
+}
+.hide-menu{
+    height: 128vh;
+    width: 70vw;
+    background-color: #282c34;
+    border: 1px solid  rgba(194, 143, 95, 0.8);
+}
+.menu-row{
+    display: flex;
+    justify-content: center;
+}
+li {
+    justify-self: center;
+}
+.nav-link{
+    color: #f1f1f1;
+}

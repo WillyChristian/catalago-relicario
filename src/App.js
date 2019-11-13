@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import LogoEscrito from './Component/IMG/Logo/LogoEscrito.png'
 import './App.css';
 import catalogo from './Component/Catalogo/catalogo.pdf'
 import { PDFReader } from 'reactjs-pdf-reader';
+import Header from './Component/Header';
+import Menu from './Component/Menu';
 
 class App extends Component {
   
@@ -28,9 +29,10 @@ class App extends Component {
 
   return (
     <div className="App">
-        
-          <img src={LogoEscrito} alt="logoEscrito"/>
-        
+      <section className="header">
+        <Header /> {/* aqui ta o botão sandwich */}
+      </section>    
+      <Menu className="hide-menu" /> {/* aqui ta o menu que vai ser aberto */}
 
 {/****************** NAVEGAÇÃO ************************/}          
         <section className="top-bar">

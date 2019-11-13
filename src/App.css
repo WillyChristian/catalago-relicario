@@ -14,10 +14,8 @@ body{
   grid-template-rows: 10vh 10vh 107vh 10vh;
   gap: 5px;
 }
-img{
-   grid-column: 1/4;
-   height: 100%;
-   justify-self:center ;
+.header{
+  grid-column: 1/4;
 }
 
 .top-bar{
@@ -33,6 +31,7 @@ img{
   color: antiquewhite;
   justify-self: end;
   align-self: center;
+  z-index: -1;
 }
 #next-page{
   color: antiquewhite;
@@ -40,6 +39,7 @@ img{
   align-self: center;
 }
 .page-num, .page-cont { margin-left:5px ; margin-right: 5px;}
+
 .info-page{
   justify-self: center;
   align-self: center;

@@ -1,0 +1,31 @@
+.header{
+    width: 100%;
+}
+.nav-header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh;
+}
+img{
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: end;
+    height: 100%;
+}
+.menu-toggle{
+    grid-column: 1/2;
+    align-self: center;
+    justify-self: center;    
+    color: aliceblue;
+    border: 1.5px solid rgba(99, 99, 99, 0.7);
+    border-radius: 50%;    
+}
+.menu-toggle:hover{
+    color: rgba(194, 143, 95, 0.8);
+}
+
+@media(max-width: 400px){
+    img{
+        height: 50%;
+    }
+}
