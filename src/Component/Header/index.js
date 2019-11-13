@@ -5,37 +5,24 @@ import gsap from "gsap";
 
 export default class Header extends Component {
 state = {
-  atributo: ""
+  valor: ""
 } 
-animaLogo = (value) => {
-  const valor = value;
-  let e = this.atributo
+animaLogo = () => {
+    const valor = "1"
   return (
-    this.setState({e: valor}),
-    console.log(this.atributo)
+    this.setState({valor}),
+    console.log(valor)
   )
 };
 
 
-  // animaImagem = () => {
-  //   gsap.to(".logo", { duration: 1, x: 150, rotation: 135 });
-  // };
-
-  // clique = () => {
-  //   const value = "botão apertado";
-  //   const e = new animaLogo
-  //   console.log(e);
-  // };
-
   render() {
-    window.document.querySelector(".header");
 
-    window.addEventListener("click", this.animaLogo, true);
 
     return (
       <div className="header">
         <nav className="nav-header">
-          <button className="btn menu-toggle">
+          <button className="btn menu-toggle" onClick={this.animaLogo}>
             <i className="fas fa-bars 5x"></i>
           </button>
           <img src={LogoEscrito} alt="logoEscrito" className="logo" />
