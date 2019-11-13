@@ -1,11 +1,29 @@
-import React from "react";
-import { Tween, Timeline } from "react-gsap";
+import React, {useState} from "react";
 
-const TimelineComponent = () => (
-  <Timeline duration="2">
-    <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} />
-    <Tween from={{ x: "-50px" }} to={{ x: "0px" }} />
-  </Timeline>
-);
+export default class animaLogo extends React.Component {
+state = {
+	atributo: ""
+}	
+animaLogo = (value) => {
+	console.log(this.atributo)
+	const valor = value;
+	return (
+		this.setState({atributo: valor})
+	)
+};
 
-export default TimelineComponent;
+	render() {
+
+		return (
+			console.log(this.atributo)
+		)
+	}
+}
+
+
+
+
+
+
+// export default animaLogo;
+	// const [atributo, setAtributo] = useState(null)
