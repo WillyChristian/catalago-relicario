@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import catalogo from "./catalogo.pdf";
+import catalogo from "./catalogo-moveis.pdf";
+import "./style.css";
 import { PDFReader } from "reactjs-pdf-reader";
-
 
 export default class Catalogo extends Component {
   state = {
@@ -21,20 +21,20 @@ export default class Catalogo extends Component {
   pagPosterior = () => this.changePage(1);
 
   render() {
-      const { pageNumber, numPages } = this.state;
+    const { pageNumber, numPages } = this.state;
     return (
       <div>
         {/****************** NAVEGAÇÃO ************************/}
         <section className="top-bar">
           <button
-            className="btn"
             id="prev-page"
-            disabled={pageNumber <= 1}
+            className="btn"
             onClick={this.pagAnterior}
+            disabled={pageNumber <= 1}
           >
-            <i className="fas fa-arrow-circle-left m-1"></i>Anterior
+            Anterior
+            <i className="fas fa-arrow-circle-left m-1"></i>
           </button>
-
           <span className="info-page">
             Página
             <span className="page-num">
@@ -43,7 +43,6 @@ export default class Catalogo extends Component {
             de
             <span className="page-cont">{numPages || "--"}</span>
           </span>
-
           <button
             className="btn"
             id="next-page"

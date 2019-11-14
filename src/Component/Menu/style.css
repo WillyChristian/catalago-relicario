@@ -1,12 +1,14 @@
 .menu {
   position: absolute;
   top: 10.6vh;
+  z-index: 2;
+  height: 100%;
 }
 .hide-menu {
-  height: 128vh;
+  height: 100%;
   width: 70vw;
   background-color: #282c34;
-  border: 1px solid rgba(194, 143, 95, 0.8);
+  /* border: 1px solid rgba(194, 143, 95, 0.8); */
 }
 .menu-row {
   display: flex;
