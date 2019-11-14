@@ -7,13 +7,4 @@ body {
 body {
   background-color: #282c34;
 }
-.App {
-  color: #4a778c;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 10vh 10vh 107vh 10vh;
-  gap: 5px;
-}
-.header {
-  grid-column: 1/4;
-}
+
