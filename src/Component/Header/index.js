@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import LogoEscrito from "../IMG/Logo/LogoEscrito.png";
 import "./style.css";
-import gsap from "gsap";
 import Menu from "../Menu/index";
 
 export default class Header extends Component {
