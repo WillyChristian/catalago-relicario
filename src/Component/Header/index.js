@@ -81,7 +81,13 @@ export default class Header extends Component {
             </div>
             <div className="empty"></div>
             <div className="empty1"></div>
-            <div className="empty2"></div>
+            <div className="empty2">
+                <li className="nav-link" onClick={this.eventMenu}>
+                  <a href="http://www.relicarioartedecor.com.br/"
+                     target="_blanck"
+                  >Gostou? Visite nossa Loja!</a>
+                </li>
+            </div>
         
         </div>
       </div>

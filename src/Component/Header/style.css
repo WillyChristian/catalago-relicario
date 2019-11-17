@@ -43,6 +43,8 @@ img {
   z-index: 3;
 }
 .empty, .empty1, .empty2{
+  align-content: center;
+  text-align: center;
   height: 20vh;
   background-color: #2f4f63;     /* RGB (47,79,99) */
   z-index: 3;
@@ -58,6 +60,11 @@ li {
 }
 .nav-link {
   color: #f1f1f1;
+}
+a{
+  text-decoration: none;
+  list-style: none;
+  color:#f1f1f1;
 }
 
 @media (max-width: 400px) {
