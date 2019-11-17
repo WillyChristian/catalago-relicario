@@ -51,7 +51,7 @@ img {
   left: 0;
 }
 .fecha{
-  transition: s;
+  transition: 5s;
 }
 li {
   justify-self: center;

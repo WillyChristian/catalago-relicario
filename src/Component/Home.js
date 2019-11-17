@@ -17,22 +17,7 @@ export default class Home extends Component {
       .from("txt", { opacity: 0, y: -50, onComplete: this.mostraTexto });
   };
 
-  mostraTexto = () => {
-    let x = document.querySelector(".h1");
-    let y = document.querySelector(".p");
-    if (x.id !== "mostra" && y.id !== "mostra") {
-      x.setAttribute("id", "mostra");
-      y.setAttribute("id", "mostra");
-      console.log('funcionou até mudar o ID')
-      this.animaTexto();
-    }
-  };
 
-  animaTexto = () => {
-    let tl = gsap.timeline();
-      tl.from(".h1", { duration: 1, yx: -50 })
-      .from(".p", { duration: 1, y: -10 }, "-=.4");
-  };
 
   render() {
     return (
@@ -45,10 +30,14 @@ export default class Home extends Component {
             onLoad={this.animaLogo}
           />
         </div>
-        <h1 id="i" className="txt h1">Seja Bem vindo(a)!</h1>
-        <p id="i" className="txt p">
-          Utilize o menu acima para navegar entre os diferentes catálogos
-        </p>
+        <div className="text-container"> 
+          <h3 id="i" className="txt h1">Seja Bem vindo(a)!</h3>
+          <p i d="i" className="txt p">
+            Utilize o menu acima para navegar entre os diferentes catálogos
+          </p>
+        </div>
+
+
       </div>
     );
   }

@@ -57,26 +57,26 @@ export default class Header extends Component {
           </nav>
         </div>
 
-        <div className="menu">
+        <div className="menu fecha" id="fecha">
          
             <div className="menu-row link0">
               <Link to="/bf-promo">
-                <li className="nav-link" onClick={this.animaReverse}>Promoção Black Friday</li>
+                <li className="nav-link" onClick={this.eventMenu}>Promoção Black Friday</li>
               </Link>
             </div>
             <div className="menu-row link1">
               <Link to="/cat-moveis">
-                <li className="nav-link" onClick={this.animaReverse}>Catálogo de Móveis </li>
+                <li className="nav-link" onClick={this.eventMenu}>Catálogo de Móveis </li>
               </Link>
             </div>
             <div className="menu-row link2">
               <Link to="/cat-estofados">
-                <li className="nav-link" onClick={this.animaReverse}>Catálogo Estofados</li>
+                <li className="nav-link" onClick={this.eventMenu}>Catálogo Estofados</li>
               </Link>
             </div>
             <div className="menu-row link3">
               <Link to="/">
-                <li className="nav-link" onClick={this.animaReverse}>Voltar para o Menu</li>
+                <li className="nav-link" onClick={this.eventMenu}>Menu Principla</li>
               </Link>
             </div>
             <div className="empty"></div>
