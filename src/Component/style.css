@@ -1,8 +1,10 @@
+.main{
+  display: flex;
+  flex-direction: column;
+}
 .logo-container {
-  background-size: cover;
   display: flex;
   justify-content: center;
-  /* align-content: center; */
 
 }
 .logo-home {
@@ -10,8 +12,14 @@
   position: absolute;
   top: 290px;  
 }
-
-.txt{
-    margin: auto;
-    color:#f1f1f1e5;
+.text-container{
+  background-color: cadetblue;
+}
+.heart{
+  background-color: white;
+  color: #ff0505;
+}
+.heart::after{
+  content: "";
+  background-image: url("./IMG/icons/heart-icon.svg");
 }

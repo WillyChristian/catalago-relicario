@@ -76,7 +76,7 @@ export default class Header extends Component {
             </div>
             <div className="menu-row link3">
               <Link to="/">
-                <li className="nav-link" onClick={this.eventMenu}>Menu Principla</li>
+                <li className="nav-link" onClick={this.eventMenu}>Menu Principal</li>
               </Link>
             </div>
             <div className="empty"></div>

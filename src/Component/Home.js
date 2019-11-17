@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import gsap from "gsap";
 import Logo from "./IMG/Logo/LogoEscrito.png";
 import "./style.css";
+import Heart from "./IMG/icons/heart-icon.svg"
 
 export default class Home extends Component {
   animaLogo = () => {
@@ -17,11 +18,9 @@ export default class Home extends Component {
       .from("txt", { opacity: 0, y: -50, onComplete: this.mostraTexto });
   };
 
-
-
   render() {
     return (
-      <div>
+      <div className="main">
         <div className="logo-container">
           <img
             src={Logo}
@@ -30,14 +29,14 @@ export default class Home extends Component {
             onLoad={this.animaLogo}
           />
         </div>
-        <div className="text-container"> 
-          <h3 id="i" className="txt h1">Seja Bem vindo(a)!</h3>
-          <p i d="i" className="txt p">
-            Utilize o menu acima para navegar entre os diferentes catálogos
-          </p>
+        <div className="text-container">
+          <h3>Seja Bem vindo(a)!</h3>
+          <p>Utilize o menu acima para navegar entre os diferentes catálogos</p>
         </div>
-
-
+        <div className="heart">
+         
+          <span>1</span>
+        </div>
       </div>
     );
   }
