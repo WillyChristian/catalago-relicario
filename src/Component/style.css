@@ -21,5 +21,5 @@
 }
 .heart::after{
   content: "";
-  background-image: url("./IMG/icons/heart-icon.svg");
+
 }
