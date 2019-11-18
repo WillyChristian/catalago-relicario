@@ -2,13 +2,20 @@ import React, { Component } from "react";
 import catalogo from "./catalogo-estofados.pdf";
 import "./style.css";
 import { PDFReader } from "reactjs-pdf-reader";
+import LikeBar from "../../Likes/LikeBar.js";
 
 export default class Catalogo extends Component {
   state = {
+    count: 0,
     numPages: null,
     pageNumber: 1
   };
+  // Configura a quantidade de likes que o catálogo recebeu
+  likeCount = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
 
+  //Configura a navegação entre as páginas do PDF
   totalPage = page => {
     this.setState({ numPages: page });
   };
@@ -61,6 +68,10 @@ export default class Catalogo extends Component {
             page={pageNumber}
             width="400"
           />
+        </section>
+
+        <section className="like-bar">
+          <LikeBar likeCount={this.likeCount} count={this.state} />
         </section>
       </div>
     );

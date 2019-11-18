@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import gsap from "gsap";
 import Logo from "./IMG/Logo/LogoEscrito.png";
 import "./style.css";
-import LikeBar from "./Likes/LikeBar"
 
 export default class Home extends Component {
   animaLogo = () => {
@@ -33,7 +32,6 @@ export default class Home extends Component {
           <h3>Seja Bem vindo(a)!</h3>
           <p>Utilize o menu acima para navegar entre os diferentes catálogos</p>
         </div>
-       <LikeBar />
       </div>
     );
   }
