@@ -3,6 +3,8 @@ import catalogo from "./catalogo.pdf";
 import "./style.css";
 import { PDFReader } from "reactjs-pdf-reader";
 import LikeBar from "../../Likes/LikeBar.js"
+import Carosel from '../Carousel/index.js'
+
 export default class Catalogo extends Component {
   state = {
     count: 0,
@@ -61,12 +63,7 @@ export default class Catalogo extends Component {
         </section>
         {/****************** CONTEÚDO ************************/}
         <section className="doc-cont">
-          <PDFReader
-            url={catalogo}
-            onDocumentComplete={this.totalPage}
-            page={pageNumber}
-            width="400"
-          />
+          <Carosel />
         </section>
 
         <section className="like-bar">
@@ -76,3 +73,10 @@ export default class Catalogo extends Component {
     );
   }
 }
+
+         // <PDFReader
+          //   url={catalogo}
+          //   onDocumentComplete={this.totalPage}
+          //   page={pageNumber}
+          //   width="400"
+          // />
