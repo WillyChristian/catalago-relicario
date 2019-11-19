@@ -30,10 +30,27 @@
   justify-self: start;
   align-self: center;
 }
+.conteudo{
+  margin: 10px 0px ;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  height: 150vh;
+}
+.conteudo img{
+  width: 50%;
+  border-radius: 10px;
+  
+}
 
-.doc-cont {
-  grid-column: 1/4;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  max-width: 100%;
+@media(max-width: 400px){
+  .conteudo{
+    width: 100%;
+    height: 70vh;
+    background-color: blue;
+  }
+  .conteudo img{
+    height: 95%;
+    width: 95%
+  }
 }

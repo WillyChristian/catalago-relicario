@@ -3,33 +3,21 @@ import catalogo from "./catalogo.pdf";
 import "./style.css";
 import { PDFReader } from "reactjs-pdf-reader";
 import LikeBar from "../../Likes/LikeBar.js"
-import Carosel from '../Carousel/index.js'
+// import Carosel from '../Carousel/index.js'
+import Images from "../Carousel/Images.js"
 
 export default class Catalogo extends Component {
   state = {
     count: 0,
-    numPages: null,
-    pageNumber: 1
   };
   // Configura a quantidade de likes que o catálogo recebeu
   likeCount = () => {
    this.setState({count: this.state.count + 1})
   };
 
-  //Configura a navegação entre as páginas do PDF
-  totalPage = page => {
-    this.setState({ numPages: page });
-  };
-  changePage = offset =>
-    this.setState(prevState => ({
-      pageNumber: prevState.pageNumber + offset
-    }));
-
-  pagAnterior = () => this.changePage(-1);
-  pagPosterior = () => this.changePage(1);
 
   render() {
-    const { pageNumber, numPages } = this.state;
+    
     return (
       <div>
         {/****************** NAVEGAÇÃO ************************/}
@@ -62,9 +50,12 @@ export default class Catalogo extends Component {
           </button>
         </section>
         {/****************** CONTEÚDO ************************/}
-        <section className="doc-cont">
-          <Carosel />
-        </section>
+          {/*<Carosel />*/}
+       <div className="conteudo">
+          {/* <img src={</>}  alt="teste"/>*/}
+          
+       </div>
+
 
         <section className="like-bar">
           <LikeBar likeCount={this.likeCount}  count={this.state}/>
@@ -74,9 +65,22 @@ export default class Catalogo extends Component {
   }
 }
 
-         // <PDFReader
-          //   url={catalogo}
-          //   onDocumentComplete={this.totalPage}
-          //   page={pageNumber}
-          //   width="400"
-          // />
+// <PDFReader
+//   url={catalogo}
+//   onDocumentComplete={this.totalPage}
+//   page={pageNumber}
+//   width="400"
+// />
+
+  //Configura a navegação entre as páginas do PDF
+  // totalPage = page => {
+  //   this.setState({ numPages: page });
+  // };
+  // changePage = offset =>
+  //   this.setState(prevState => ({
+  //     pageNumber: prevState.pageNumber + offset
+  //   }));
+
+  // pagAnterior = () => this.changePage(-1);
+  // pagPosterior = () => this.changePage(1);
+  // const { pageNumber, numPages } = this.state;
