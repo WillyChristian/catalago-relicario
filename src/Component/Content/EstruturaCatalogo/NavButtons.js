@@ -7,7 +7,7 @@ const NavButtons = props => {
 		const { next, prev, current } = props	
 		return (
 			<div>
-		        
+		        <section className="top-bar">
 		          {/* BOTÃO PARA PÁGINA ANTERIOR */}
 		          <button 
 		          	id="prev-page" 
@@ -35,7 +35,7 @@ const NavButtons = props => {
 		          Próximo
 		            <i className="fas fa-arrow-circle-right m-1"></i>
 		          </button>
-		        
+		        </section>
 			</div>
 		)
 	}

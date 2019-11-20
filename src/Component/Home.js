@@ -8,13 +8,12 @@ export default class Home extends Component {
     let tl = gsap.timeline();
     tl.from(".logo-home", {
       delay: 0.5,
-      duration: 2.5,
+      duration: 1.5,
       height: 100,
       opacity: 0
     })
-      .to(".logo-home", { y: -290, duration: 1, opacity: 0, height: 38 })
-      .to("logo-container", { duration: 1, opacity: "0" })
-      .from("txt", { opacity: 0, y: -50, onComplete: this.mostraTexto });
+      .to(".logo-home", { duration: 1, opacity: 0})
+     
   };
 
   render() {

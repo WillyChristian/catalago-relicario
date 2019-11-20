@@ -1,23 +1,23 @@
 import React from 'react';
-import p1 from '../../IMG/jpg/p1.jpg'
-import p2 from '../../IMG/jpg/p2.jpg'
-import p3 from '../../IMG/jpg/p3.jpg'
-import p4 from '../../IMG/jpg/p4.jpg'
-import p5 from '../../IMG/jpg/p5.jpg'
-import p6 from '../../IMG/jpg/p6.jpg'
-import p7 from '../../IMG/jpg/p7.jpg'
-import p8 from '../../IMG/jpg/p8.jpg'
-import p9 from '../../IMG/jpg/p9.jpg'
-import p10 from '../../IMG/jpg/p10.jpg'
-import p11 from '../../IMG/jpg/p11.jpg'
-import p12 from '../../IMG/jpg/p12.jpg'
-import p13 from '../../IMG/jpg/p13.jpg'
-import p14 from '../../IMG/jpg/p14.jpg'
-import p15 from '../../IMG/jpg/p15.jpg'
+import p1 from '../../IMG/BlackFriday/p1.jpg'
+import p2 from '../../IMG/BlackFriday/p2.jpg'
+import p3 from '../../IMG/BlackFriday/p3.jpg'
+import p4 from '../../IMG/BlackFriday/p4.jpg'
+import p5 from '../../IMG/BlackFriday/p5.jpg'
+import p6 from '../../IMG/BlackFriday/p6.jpg'
+import p7 from '../../IMG/BlackFriday/p7.jpg'
+import p8 from '../../IMG/BlackFriday/p8.jpg'
+import p9 from '../../IMG/BlackFriday/p9.jpg'
+import p10 from '../../IMG/BlackFriday/p10.jpg'
+import p11 from '../../IMG/BlackFriday/p11.jpg'
+import p12 from '../../IMG/BlackFriday/p12.jpg'
+import p13 from '../../IMG/BlackFriday/p13.jpg'
+import p14 from '../../IMG/BlackFriday/p14.jpg'
+import p15 from '../../IMG/BlackFriday/p15.jpg'
 
 import NavButtons from "../EstruturaCatalogo/NavButtons.js"
 import LikeBar from "../../Likes/LikeBar.js"
-import "./style.css";
+import "../EstruturaCatalogo/StyleCatalogo.css"
 
 
 export default class BlackFriday extends React.Component {
@@ -63,19 +63,15 @@ likeCount = () => {
 		return 	(
 			<div>
 			{/********************************** NAVEGAÇÃO ****************************************/}
-		        <section className="top-bar">
-					<NavButtons next={this.next} prev={this.prev} current={this.state} />
-    			</section>
-
+				<NavButtons next={this.next} prev={this.prev} current={this.state} />
+    			
     		{/********************************** CONTEÚDO DO CATÁLOGO ****************************************/}
 				<div className="conteudo">
-					<img src={this.state.showPage} alt="imagem"/>
+					<img className="img-catalogo" src={this.state.showPage} alt="imagem"/>
        			</div>
 
     		{/********************************** AVALIAÇÃO / LIKES ****************************************/}	
-		        <section className="like-bar">
-          			<LikeBar likeCount={this.likeCount}  count={this.state}/>
-        		</section>
+      			{/*<LikeBar likeCount={this.likeCount}  count={this.state}/>*/}
 		    </div>
 	)}
 }

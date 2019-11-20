@@ -6,7 +6,7 @@ const LikeBar = props => {
 	return (
 		<div>
 			<div className="like-container">
-				<a href="#" onClick={likeCount} className="likeBtn" />
+				<span href="#" onClick={likeCount} className="likeBtn" ></span>
 				{count.count}
 			</div>
 		</div>

@@ -51,7 +51,7 @@ export default class Header extends Component {
         <div className="header">
           <nav className="nav-header">
             <button className="btn menu-toggle" onClick={this.eventMenu}>
-              <i className="fas fa-bars 5x"></i>
+              <i className="fas fa-bars 3x"></i>
             </button>
             <img src={LogoEscrito} alt="logoEscrito" className="logo" />
           </nav>

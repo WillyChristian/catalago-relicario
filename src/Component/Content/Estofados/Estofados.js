@@ -1,79 +1,76 @@
-import React, { Component } from "react";
-import catalogo from "./catalogo-estofados.pdf";
-import "./style.css";
-import { PDFReader } from "reactjs-pdf-reader";
-import LikeBar from "../../Likes/LikeBar.js";
+import React from 'react';
 
-export default class Catalogo extends Component {
-  state = {
-    count: 0,
-    numPages: null,
-    pageNumber: 1
+import p001 from '../../IMG/CatalogoEstofados/p001.jpg'
+import p002 from '../../IMG/CatalogoEstofados/p002.jpg'
+import p003 from '../../IMG/CatalogoEstofados/p003.jpg'
+import p004 from '../../IMG/CatalogoEstofados/p004.jpg'
+import p005 from '../../IMG/CatalogoEstofados/p005.jpg'
+import p006 from '../../IMG/CatalogoEstofados/p006.jpg'
+import p007 from '../../IMG/CatalogoEstofados/p007.jpg'
+import p008 from '../../IMG/CatalogoEstofados/p008.jpg'
+import p009 from '../../IMG/CatalogoEstofados/p009.jpg'
+import p010 from '../../IMG/CatalogoEstofados/p010.jpg'
+import p011 from '../../IMG/CatalogoEstofados/p011.jpg'
+import p012 from '../../IMG/CatalogoEstofados/p012.jpg'
+import p013 from '../../IMG/CatalogoEstofados/p013.jpg'
+
+import NavButtons from "../EstruturaCatalogo/NavButtons.js"
+import LikeBar from "../../Likes/LikeBar.js"
+import "../EstruturaCatalogo/StyleCatalogo.css"
+
+export default class Estofados extends React.Component {
+constructor(props) {
+  super(props);
+  this.state = { 
+    imagem:[p001,p002,p003,p004,p005,p006,p007,p008,p009,p010,p011,p012,p013],
+    pagAtual: 0,
+    showPage: [p001],
+    count: 0
   };
-  // Configura a quantidade de likes que o catálogo recebeu
-  likeCount = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
+}
 
-  //Configura a navegação entre as páginas do PDF
-  totalPage = page => {
-    this.setState({ numPages: page });
-  };
-  changePage = offset =>
-    this.setState(prevState => ({
-      pageNumber: prevState.pageNumber + offset
-    }));
+next = (props) => {
+  let pagAtual = this.state.pagAtual
+  let showPage = this.state.showPage
+  const imagens = this.state.imagem
 
-  pagAnterior = () => this.changePage(-1);
-  pagPosterior = () => this.changePage(1);
-
-  render() {
-    const { pageNumber, numPages } = this.state;
-    return (
-      <div>
-        {/****************** NAVEGAÇÃO ************************/}
-        <section className="top-bar">
-          <button
-            id="prev-page"
-            className="btn"
-            onClick={this.pagAnterior}
-            disabled={pageNumber <= 1}
-          >
-            Anterior
-            <i className="fas fa-arrow-circle-left m-1"></i>
-          </button>
-          <span className="info-page">
-            Página
-            <span className="page-num">
-              {pageNumber || (numPages ? 1 : "--")}
-            </span>
-            de
-            <span className="page-cont">{numPages || "--"}</span>
-          </span>
-          <button
-            className="btn"
-            id="next-page"
-            disabled={pageNumber >= numPages}
-            onClick={this.pagPosterior}
-          >
-            Próximo
-            <i className="fas fa-arrow-circle-right m-1"></i>
-          </button>
-        </section>
-        {/****************** CONTEÚDO ************************/}
-        <section className="doc-cont">
-          <PDFReader
-            url={catalogo}
-            onDocumentComplete={this.totalPage}
-            page={pageNumber}
-            width="400"
-          />
-        </section>
-
-        <section className="like-bar">
-          <LikeBar likeCount={this.likeCount} count={this.state} />
-        </section>
-      </div>
-    );
+  if(pagAtual < imagens.length){
+    pagAtual += 1
+    showPage = imagens[pagAtual]
   }
+   return this.setState({pagAtual, showPage})
+}
+
+prev = (props) => {
+  let pagAtual = this.state.pagAtual
+  let showPage = this.state.showPage
+  const imagens = this.state.imagem
+
+  if(pagAtual < imagens.length){
+    pagAtual -= 1
+    showPage = imagens[pagAtual]
+  }
+   return this.setState({pagAtual, showPage})
+}
+
+// Configura a quantidade de likes que o catálogo recebeu
+likeCount = () => {
+
+   this.setState({count: this.state.count + 1})   
+};
+  render(){
+    return  (
+      <div>
+      {/********************************** NAVEGAÇÃO ****************************************/}
+        <NavButtons next={this.next} prev={this.prev} current={this.state} />
+
+        {/********************************** CONTEÚDO DO CATÁLOGO ****************************************/}
+        <div className="conteudo">
+          <img className="img-catalogo" src={this.state.showPage} alt="imagem"/>
+        </div>
+
+        {/********************************** AVALIAÇÃO / LIKES ****************************************/} 
+        {/*<LikeBar likeCount={this.likeCount}  count={this.state}/>*/}
+        </div>
+  )}
 }
