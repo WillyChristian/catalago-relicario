@@ -60,17 +60,17 @@ export default class Header extends Component {
         <div className="menu fecha" id="fecha">
          
             <div className="menu-row link0">
-              <Link to="/bf-promo">
+              <Link to="/bf">
                 <li className="nav-link" onClick={this.eventMenu}>Promoção Black Friday</li>
               </Link>
             </div>
             <div className="menu-row link1">
-              <Link to="/cat-moveis">
+              <Link to="/moveis">
                 <li className="nav-link" onClick={this.eventMenu}>Catálogo de Móveis </li>
               </Link>
             </div>
             <div className="menu-row link2">
-              <Link to="/cat-estofados">
+              <Link to="/estofados">
                 <li className="nav-link" onClick={this.eventMenu}>Catálogo Estofados</li>
               </Link>
             </div>

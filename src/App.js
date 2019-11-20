@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Component/Header";
-import Catalogo from "./Component/Content/catBlackFriday/Catalogo";
-import Moveis from "./Component/Content/catMoveis/Moveis";
+import BlackFriday from "./Component/Content/BlackFriday/BlackFriday.js";
+import Moveis from "./Component/Content/Moveis/Moveis";
 import Home from "./Component/Home";
-import Estofados from "./Component/Content/catEstofados/Estofados";
+import Estofados from "./Component/Content/Estofados/Estofados";
 class App extends Component {
   render() {
     return (
@@ -14,9 +14,9 @@ class App extends Component {
             <Switch>
               {/****************** BOTÃO MENU E LOGO ************************/}
               <Route path="/" exact component={Home} />
-              <Route path="/bf-promo" component={Catalogo} />
-              <Route path="/cat-moveis" component={Moveis} />
-              <Route path="/cat-estofados" component={Estofados} />
+              <Route path="/bf" component={BlackFriday} />
+              <Route path="/moveis" component={Moveis} />
+              <Route path="/estofados" component={Estofados} />
             </Switch>
       </Router>
     );
