@@ -20,9 +20,10 @@ const NavButtons = props => {
 
 
 		            {/* NAVEGAÇÃO ENTRE PÁGINAS */}
-		            <span className="info-page">Página
-		              <span className="page-num"></span>de
-		              <span className="page-cont"></span> {/* função com a quantidade total de páginas */}
+		            <span className="info-page">
+		              <span className="page-num">{current.pagAtual + 1}</span>
+		              	de
+		              <span className="page-cont">{current.imagem.length}</span> {/* função com a quantidade total de páginas */}
 		            </span>
 
 		          {/* BOTÃO PARA PÁGINA POSTERIOR */}
