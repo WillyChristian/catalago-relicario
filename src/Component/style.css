@@ -1,7 +1,6 @@
 .logo-container {
   display: flex;
   justify-content: center;
-
 }
 .logo-home {
   height: 70px;
@@ -14,4 +13,5 @@
   border-top: 1px solid rgba(200,200,50,.8);
   border-bottom: 2px solid rgba(200,200,50,0.8) ;
   border-radius: 20px;
+  opacity: 0;
 }
