@@ -15,7 +15,7 @@ export default class Home extends Component {
       .to(".logo-home", { duration: 1, opacity: 0})
      
   };
-
+  
   render() {
     return (
       <div className="main">
