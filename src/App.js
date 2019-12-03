@@ -7,19 +7,23 @@ import Moveis from "./Component/Content/Moveis/Moveis";
 import Ceramicas from "./Component/Content/Ceramicas/Ceramicas";
 import Home from "./Component/Home";
 import Estofados from "./Component/Content/Estofados/Estofados";
+import indexLogin from "./Login/indexLogin";
+
+
 class App extends Component {
   render() {
     return (
       <Router>
-            <Header /> 
-            <Switch>
-              {/****************** BOTÃO MENU E LOGO ************************/}
-              <Route path="/" exact component={Home} />
-              <Route path="/ceramicas" exact component={Ceramicas} />
-              <Route path="/bf" component={BlackFriday} />
-              <Route path="/moveis" component={Moveis} />
-              <Route path="/estofados" component={Estofados} />
-            </Switch>
+        <Header />
+        <Switch>
+          {/****************** BOTÃO MENU E LOGO ************************/}
+          <Route path="/" exact component={Home} />
+          <Route path="/ceramicas" exact component={Ceramicas} />
+          <Route path="/bf" component={BlackFriday} />
+          <Route path="/moveis" component={Moveis} />
+          <Route path="/estofados" component={Estofados} />
+          <Route path="/log" component={indexLogin} />
+        </Switch>
       </Router>
     );
   }
