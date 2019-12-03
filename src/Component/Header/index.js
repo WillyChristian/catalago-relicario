@@ -64,45 +64,59 @@ export default class Header extends Component {
         </div>
 
         <div className="menu" id="fecha">
-         
-            <div className="menu-row " id="m">
-              <Link to="/bf">
-                <li className="nav-link" onClick={this.eventMenu}>Promoção Black Friday</li>
-              </Link>
-            </div>
-            <div className="menu-row " id="m1">
-              <Link to="/moveis">
-                <li className="nav-link" onClick={this.eventMenu}>Catálogo de Móveis </li>
-              </Link>
-            </div>
-            <div className="menu-row " id="m2">
-              <Link to="/estofados">
-                <li className="nav-link" onClick={this.eventMenu}>Catálogo Estofados</li>
-              </Link>
-            </div>
-            <div className="menu-row " id="m3">
-              <Link to="/ceramicas">
-                <li className="nav-link" onClick={this.eventMenu}>Catálogo de Cerâmicas</li>
-              </Link>
-            </div>
-            <div className="menu-row " id="m4">
-              <Link to="/">
-                <li className="nav-link" onClick={this.eventMenu}>Menu Principal</li>
-              </Link>
-            </div>
-            <div className="menu-row " id="m5"></div>
-            <div className="menu-row " id="m6"></div>
-            <div className="menu-row " id="m7"></div>
-            <div className="menu-row " id="m8"></div>
-            <div className="menu-row " id="m9"></div>
-            <div className="menu-row " id="m10" >
-                <li className="nav-link" onClick={this.eventMenu}>
-                  <a href="http://www.relicarioartedecor.com.br/"
-                     target="_blanck"
-                  >Gostou? Visite nossa Loja!</a>
-                </li>
-            </div>
-        
+          <div className="menu-row " id="m">
+            <Link to="/bf">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Promoção Black Friday
+              </li>
+            </Link>
+          </div>
+          <div className="menu-row " id="m1">
+            <Link to="/moveis">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Catálogo de Móveis{" "}
+              </li>
+            </Link>
+          </div>
+          <div className="menu-row " id="m2">
+            <Link to="/estofados">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Catálogo Estofados
+              </li>
+            </Link>
+          </div>
+          <div className="menu-row " id="m3">
+            <Link to="/ceramicas">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Catálogo de Cerâmicas
+              </li>
+            </Link>
+          </div>
+          <div className="menu-row " id="m4">
+            <Link to="/">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Menu Principal
+              </li>
+            </Link>
+          </div>
+          <div className="menu-row " id="m5"></div>
+          <div className="menu-row " id="m6"></div>
+          <div className="menu-row " id="m7"></div>
+          <div className="menu-row " id="m8"></div>
+          <div className="menu-row " id="m9">
+            <Link to="/log">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Fazer Login
+              </li>
+            </Link>
+          </div>
+          <div className="menu-row " id="m10">
+            <li className="nav-link" onClick={this.eventMenu}>
+              <a href="http://www.relicarioartedecor.com.br/" target="_blanck">
+                Gostou? Visite nossa Loja!
+              </a>
+            </li>
+          </div>
         </div>
       </div>
     );

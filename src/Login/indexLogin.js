@@ -4,13 +4,22 @@ export default class indexLogin extends Component {
     render() {
         return (
             <div className="login">
-                <h1>Teste</h1>
-                <div className="dados">
-                    <span>Login</span>
+                <form action="#" className="login-form">
+                <h1>Login</h1>
+                <div className="data">
                     <input type="text"/>
-                    <span>Senha</span>
-                    <input type="password"/>
+                    <span data-texto="User"/>
+                   
                 </div>
+                <div className="data">
+                    <input type="password"/>
+                    <span data-texto="Password"/>
+                </div>
+                <input type="submit" className="btn logbtn"/>
+                <div className="create-account">
+                    Não possui cadastro? <a href="#">Cadastr-se!</a>
+                </div>
+                </form>
             </div>
         )
     }
