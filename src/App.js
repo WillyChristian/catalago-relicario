@@ -6,11 +6,14 @@ import Header from "./Component/Header";
 // import indexLogin from "./Login/indexLogin";
 
 /**************************** CATÁLOGOS ****************************/ 
-import BlackFriday from "./Component/Content/BlackFriday/BlackFriday.js";
-import Moveis from "./Component/Content/Moveis/Moveis";
-import Ceramicas from "./Component/Content/Ceramicas/Ceramicas";
-import Estofados from "./Component/Content/Estofados/Estofados";
-import Murano from "./Component/Content/Muranos/Murano";
+import AparelhoJantar from "./Component/Content/AparelhosJantar/AparelhoJantar.js";
+import Comoda from "./Component/Content/Comodas/Comoda.js";
+import Coral from "./Component/Content/Corais/Coral.js";
+import CristalVidro from "./Component/Content/CristaisVidros/CristalVidro.js";
+import Espelhos from "./Component/Content/Espelhos/Espelho.js";
+import MovelClassico from "./Component/Content/MoveisClassicos/MovelClassico.js";
+import Murano from "./Component/Content/Muranos/Murano.js";
+import Vaso from "./Component/Content/Vasos/Vaso.js";
 
 
 class App extends Component {
@@ -21,12 +24,15 @@ class App extends Component {
         <Switch>
           {/****************** BOTÃO MENU E LOGO ************************/}
           <Route path="/" exact component={Home} />
-          <Route path="/ceramicas" exact component={Ceramicas} />
-          <Route path="/bf" component={BlackFriday} />
-          <Route path="/moveis" component={Moveis} />
-          <Route path="/estofados" component={Estofados} />
-          {/* <Route path="/log" component={indexLogin} /> */}
+          <Route path="/aparelhos-jantar" component={AparelhoJantar} />
+          <Route path="/comodas" component={Comoda} />
+          <Route path="/corais" component={Coral} />
+          <Route path="/cristais-vidros" component={CristalVidro} />
+          <Route path="/espelhos" component={Espelhos} />
+          <Route path="/moveis-classic" component={MovelClassico} />
           <Route path="/muranos" component={Murano} />
+          <Route path="/vasos" component={Vaso} />
+          {/* <Route path="/log" component={indexLogin} /> */}
         </Switch>
       </Router>
     );

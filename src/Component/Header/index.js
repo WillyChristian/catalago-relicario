@@ -65,56 +65,68 @@ export default class Header extends Component {
 
         <div className="menu" id="fecha">
           <div className="menu-row " id="m">
-            <Link to="/bf">
+            <Link to="/aparelhos-jantar">
               <li className="nav-link" onClick={this.eventMenu}>
-               #1
+               Aparelhos de Jantar
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m1">
-            <Link to="/moveis">
+            <Link to="/comodas">
               <li className="nav-link" onClick={this.eventMenu}>
-                #2
+                Cômodas
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m2">
-            <Link to="/estofados">
+            <Link to="/corais">
               <li className="nav-link" onClick={this.eventMenu}>
-                #3
+                Corais
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m3">
-            <Link to="/ceramicas">
+            <Link to="/cristais-vidros">
               <li className="nav-link" onClick={this.eventMenu}>
-               #4
+               Cristais e Vidros
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m4">
-            <Link to="/muranos">
+            <Link to="/espelhos">
               <li className="nav-link" onClick={this.eventMenu}>
-                Catálogo de Muranos
+                Espelhos
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m5">
-            <Link to="/">
+            <Link to="/moveis-classic">
               <li className="nav-link" onClick={this.eventMenu}>
-                Menu Principal
+                Móveis Clássicos
               </li>
             </Link>
           </div>
-          <div className="menu-row " id="m6"></div>
-          <div className="menu-row " id="m7"></div>
+          <div className="menu-row " id="m6">
+             <Link to="/muranos">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Peças de Murano
+              </li>
+             </Link>
+          </div>
+          <div className="menu-row " id="m7">
+             <Link to="/vasos">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Vasos
+              </li>
+             </Link>
+          </div>
           <div className="menu-row " id="m8"></div>
           <div className="menu-row " id="m9">
-            {/* <Link to="/log">
+             <Link to="/">
               <li className="nav-link" onClick={this.eventMenu}>
-                Fazer Login
-              </li> 
-            </Link>*/}
+                Voltar à Pagina Inicial
+              </li>
+             </Link>
           </div>
           <div className="menu-row " id="m10">
             <li className="nav-link" onClick={this.eventMenu}>

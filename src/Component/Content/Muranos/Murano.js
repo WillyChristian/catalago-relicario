@@ -3,15 +3,15 @@ import NavButtons from "../EstruturaCatalogo/NavButtons.js"
 import LikeBar from "../../Likes/LikeBar.js"
 import "../EstruturaCatalogo/StyleCatalogo.css"
 
-import p001 from '../../IMG/CatalogoMurano/p001.jpg'
-import p002 from '../../IMG/CatalogoMurano/p002.jpg'
-import p003 from '../../IMG/CatalogoMurano/p003.jpg'
-import p004 from '../../IMG/CatalogoMurano/p004.jpg'
-import p005 from '../../IMG/CatalogoMurano/p005.jpg'
-import p006 from '../../IMG/CatalogoMurano/p006.jpg'
-import p007 from '../../IMG/CatalogoMurano/p007.jpg'
-import p008 from '../../IMG/CatalogoMurano/p008.jpg'
-import p009 from '../../IMG/CatalogoMurano/p009.jpg'
+import p001 from '../../IMG/Murano/p001.jpg'
+import p002 from '../../IMG/Murano/p002.jpg'
+import p003 from '../../IMG/Murano/p003.jpg'
+import p004 from '../../IMG/Murano/p004.jpg'
+import p005 from '../../IMG/Murano/p005.jpg'
+import p006 from '../../IMG/Murano/p006.jpg'
+import p007 from '../../IMG/Murano/p007.jpg'
+import p008 from '../../IMG/Murano/p008.jpg'
+import p009 from '../../IMG/Murano/p009.jpg'
 
 export default class Moveis extends React.Component {
 constructor(props) {
