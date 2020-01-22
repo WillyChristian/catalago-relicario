@@ -22,7 +22,7 @@ export default class Header extends Component {
 
   animaMenu = () => {
     let tl = gsap.timeline();
-    tl.to("#m",  {duration: .2, x:300},"-=.1")
+    tl.to("#m",  {duration: .2, x: 300},"-=.1")
       .to("#m1", {duration: .2, x: 300 },"-=.1")
       .to("#m2", {duration: .2, x: 300 },"-=.15")
       .to("#m3", {duration: .4, x: 300 },"-=.2")
@@ -38,7 +38,7 @@ export default class Header extends Component {
   animaReverse = () => {
 
     let tl = gsap.timeline();
-    tl.to("#m",  {duration: .2, x:0},"-=.1")
+    tl.to("#m",  {duration: .2, x: 0},"-=.1")
       .to("#m1", {duration: .2, x: 0 },"-=.1")
       .to("#m2", {duration: .2, x: 0 },"-=.15")
       .to("#m3", {duration: .4, x: 0 },"-=.2")
@@ -67,28 +67,28 @@ export default class Header extends Component {
           <div className="menu-row " id="m">
             <Link to="/bf">
               <li className="nav-link" onClick={this.eventMenu}>
-                Promoção Black Friday
+               #1
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m1">
             <Link to="/moveis">
               <li className="nav-link" onClick={this.eventMenu}>
-                Catálogo de Móveis{" "}
+                #2
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m2">
             <Link to="/estofados">
               <li className="nav-link" onClick={this.eventMenu}>
-                Catálogo Estofados
+                #3
               </li>
             </Link>
           </div>
           <div className="menu-row " id="m3">
             <Link to="/ceramicas">
               <li className="nav-link" onClick={this.eventMenu}>
-                Catálogo de Cerâmicas
+               #4
               </li>
             </Link>
           </div>
