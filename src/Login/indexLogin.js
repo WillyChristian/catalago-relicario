@@ -17,7 +17,7 @@ export default class indexLogin extends Component {
                 </div>
                 <input type="submit" className="btn logbtn"/>
                 <div className="create-account">
-                    Não possui cadastro? <a href="#">Cadastr-se!</a>
+                    Não possui cadastro? <a href="localhost:3000">Cadastr-se!</a>
                 </div>
                 </form>
             </div>
