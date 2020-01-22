@@ -110,11 +110,11 @@ export default class Header extends Component {
           <div className="menu-row " id="m7"></div>
           <div className="menu-row " id="m8"></div>
           <div className="menu-row " id="m9">
-            <Link to="/log">
+            {/* <Link to="/log">
               <li className="nav-link" onClick={this.eventMenu}>
                 Fazer Login
-              </li>
-            </Link>
+              </li> 
+            </Link>*/}
           </div>
           <div className="menu-row " id="m10">
             <li className="nav-link" onClick={this.eventMenu}>
