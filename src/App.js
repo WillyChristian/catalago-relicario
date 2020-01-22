@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Component/Home";
 import Header from "./Component/Header";
-import indexLogin from "./Login/indexLogin";
+// import indexLogin from "./Login/indexLogin";
 
 /**************************** CATÁLOGOS ****************************/ 
 import BlackFriday from "./Component/Content/BlackFriday/BlackFriday.js";
@@ -25,7 +25,7 @@ class App extends Component {
           <Route path="/bf" component={BlackFriday} />
           <Route path="/moveis" component={Moveis} />
           <Route path="/estofados" component={Estofados} />
-          <Route path="/log" component={indexLogin} />
+          {/* <Route path="/log" component={indexLogin} /> */}
           <Route path="/muranos" component={Murano} />
         </Switch>
       </Router>
