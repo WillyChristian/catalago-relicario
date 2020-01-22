@@ -93,13 +93,19 @@ export default class Header extends Component {
             </Link>
           </div>
           <div className="menu-row " id="m4">
+            <Link to="/muranos">
+              <li className="nav-link" onClick={this.eventMenu}>
+                Catálogo de Muranos
+              </li>
+            </Link>
+          </div>
+          <div className="menu-row " id="m5">
             <Link to="/">
               <li className="nav-link" onClick={this.eventMenu}>
                 Menu Principal
               </li>
             </Link>
           </div>
-          <div className="menu-row " id="m5"></div>
           <div className="menu-row " id="m6"></div>
           <div className="menu-row " id="m7"></div>
           <div className="menu-row " id="m8"></div>

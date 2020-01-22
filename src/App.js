@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./Component/Home";
 import Header from "./Component/Header";
+import indexLogin from "./Login/indexLogin";
+
+/**************************** CATÁLOGOS ****************************/ 
 import BlackFriday from "./Component/Content/BlackFriday/BlackFriday.js";
 import Moveis from "./Component/Content/Moveis/Moveis";
 import Ceramicas from "./Component/Content/Ceramicas/Ceramicas";
-import Home from "./Component/Home";
 import Estofados from "./Component/Content/Estofados/Estofados";
-import indexLogin from "./Login/indexLogin";
+import Murano from "./Component/Content/Muranos/Murano";
 
 
 class App extends Component {
@@ -23,6 +26,7 @@ class App extends Component {
           <Route path="/moveis" component={Moveis} />
           <Route path="/estofados" component={Estofados} />
           <Route path="/log" component={indexLogin} />
+          <Route path="/muranos" component={Murano} />
         </Switch>
       </Router>
     );
