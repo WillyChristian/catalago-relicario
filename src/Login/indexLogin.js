@@ -5,14 +5,17 @@ import axios from 'axios'
 export default class indexLogin extends Component {
 
 login = () =>{
-    axios.post(
-        "http://localhost:5000/user/auth"
-    ).then( response => {
-        let message = document.getElementById("msg")
-        if(response.status === 200){
-            message.setAttribute("value", "Usuário logado com sucesso")
+    let email = document.querySelector("#username").value
+    let password = document.querySelector("#password").value
+    axios({
+        method: "post",
+        url: "http://localhost:5000/user/auth",
+        data: {
+            email: email,
+            senha: password
         }
-    } )
+    }).then(resp => console.log(resp)
+    ).catch(err => console.log(err))
 }
     render() {
         return (
