@@ -1,6 +1,5 @@
 import React from "react"
 import NavButtons from "../EstruturaCatalogo/NavButtons.js"
-import LikeBar from "../../Likes/LikeBar.js"
 import "../EstruturaCatalogo/StyleCatalogo.css"
 
 import p001 from '../../IMG/Vasos/p001.jpg'

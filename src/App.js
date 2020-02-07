@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Component/Home";
 import Header from "./Component/Header";
-// import indexLogin from "./Login/indexLogin";
+import indexLogin from "./Login/indexLogin";
 
 /**************************** CATÁLOGOS ****************************/ 
 import AparelhoJantar from "./Component/Content/AparelhosJantar/AparelhoJantar.js";
@@ -32,7 +32,7 @@ class App extends Component {
           <Route path="/moveis-classic" component={MovelClassico} />
           <Route path="/muranos" component={Murano} />
           <Route path="/vasos" component={Vaso} />
-          {/* <Route path="/log" component={indexLogin} /> */}
+          <Route path="/log" component={indexLogin} /> 
         </Switch>
       </Router>
     );
