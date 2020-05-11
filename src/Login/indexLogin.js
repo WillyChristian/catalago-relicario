@@ -1,3 +1,9 @@
+/* 
+        THIS ARCHIVES WAS UPLOADED BUT HAS NO FUNCTIONS ON THE SYSTEM
+        BEACAUSE I'M NOT WORKING WITH THEM ANYMORE, AND I HAVEN'T TIME TO
+        FINISH IT.
+*/
+
 import React, { Component } from 'react'
 import "./styleLogin.css"
 import axios from 'axios'
